@@ -20,7 +20,6 @@ class CreateSeccionesEstaticas extends Migration
             $table->integer('id_pais')->unsigned();
             $table->enum('estatus', ['A','I'])->default('A');//Activo, Inactivo
             $table->timestamps();
-
             $table->foreign('id_pais')->references('id')->on('pais')->onDelete('cascade');
         });
     }

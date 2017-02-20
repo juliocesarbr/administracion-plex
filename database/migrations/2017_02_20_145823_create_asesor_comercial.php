@@ -17,6 +17,8 @@ class CreateAsesorComercial extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('apellido');
+            $table->string('correo');
+            $table->string('telf');
             $table->string('cargo');
             $table->enum('estatus',['A','I'])->default('A');//Activo, Inactivo
             $table->timestamps();

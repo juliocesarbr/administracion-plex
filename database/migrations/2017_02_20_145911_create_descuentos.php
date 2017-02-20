@@ -17,6 +17,7 @@ class CreateDescuentos extends Migration
             $table->increments('id');
             $table->string('nombre_descuento');
             $table->integer('porcentaje_descuento');
+            $table->enum('estatus', ['A','I'])->default('A');//Activo, Inactivo
             $table->timestamps();
         });
     }

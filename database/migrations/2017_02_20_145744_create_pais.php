@@ -20,6 +20,7 @@ class CreatePais extends Migration
             $table->string('identificacion_fiscal');//RIF, NIT, RUT
             $table->string('codigo_telf');
             $table->string('impuestos');
+            $table->string('moneda');
             $table->enum('estatus',['A', 'I'])->default('A');//Activo, Inactivo
             $table->timestamps();
         });
