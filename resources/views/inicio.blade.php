@@ -10,6 +10,7 @@
         <script src="bower_components/angular/angular.min.js"></script>
         <script src="bower_components/angular-route/angular-route.min.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+        <script>var baseUrl = "{{ url('/') }}/";</script>
 
         <title>Administración PLEX</title>
 
@@ -72,24 +73,13 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
             <div class="content">
                 <!--Contenedor Principal-->
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <h1>
-                                App de PLEX
+                                Administración PLEX
                             </h1>
 
                         </div>
@@ -104,5 +94,6 @@
         <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/controller.js"></script>
     </body>
 </html>

@@ -4,10 +4,14 @@ elixir((mix) => {
     mix.sass('app.scss')
        .webpack('app.js');
 
-    //Unifico los scripts requeridos para angular en un solo archivo con gulp
+    //Unifico los scripts
     mix.scripts([
     	'app.js',
-    	'controllers.js',
     	//'services.js'
     ], 'public/js/app.js');
+
+    //Unifico los controladores
+    mix.scripts([
+    	'controllers/userController.js',
+    ], 'public/js/controller.js');
 });
